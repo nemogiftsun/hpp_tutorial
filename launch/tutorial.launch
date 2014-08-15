@@ -1,6 +1,6 @@
 <launch>
   <param name="kitchen_description"
-    textfile="$(find iai_maps)/urdf/kitchen_area.urdf"/>
+    textfile="$(find iai_maps)/urdf/table_brown.urdf"/>
   <param name="robot_description"
 	 textfile="$(find hpp_tutorial)/urdf/pr2.urdf"/>
   <node name="robot_state_publisher"
@@ -11,7 +11,7 @@
   </node>
   <node pkg="tf" type="static_transform_publisher"
 	name="kitchen_link_broadcaster"
-	args="0 0 0 0 0 0 /map /iai_kitchen/kitchen_link 200">
+	args="0 0 0 0 0 0 /map /iai_kitchen/table_top_link 200">
   </node>
   <node pkg="robot_state_chain_publisher" type="state_chain_publisher"
     name="kitchen_state_publisher" output="screen">
